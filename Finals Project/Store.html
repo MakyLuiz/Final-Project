@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="Store.css">
+</head>
+<body>
+    <script type="text/javascript" src="Index.js"></script>
+    <div class="navbar">
+        <a href="C:\Users\Maky\Desktop\Projects\Finals Project\Index.html"><img src="https://seeklogo.com/images/P/pokemon-go-logo-6A54081537-seeklogo.com.png"></a>
+        <h1>Sensei Miggy</h1>
+        <a href="Login Page.html" class="btn">Logout</a>
+        <a href="Profile.html" class="btn">Profile</a>
+        <a href="Store.html" class="btn">Store</a>
+        <a href="Index.html" class="btn">Home</a>
+    </div>
+          
+    
+    <div class="title-container">
+        <h1>Web Store</h1>
+
+        <a href="Transaction History.html"><h2 class="Transaction">Transaction History</h2></a>
+        
+        <button class="cart" onclick="toggleDropdown()"><img src="https://pnghq.com/wp-content/uploads/pnghq.com-shopping-cart-icon-png-wi-3.png"></button>
+            <div class="cart-dropdown-content" id="cart">
+                <p id="cart-content">Cart is Empty</p>
+                <p id="total-price">Total Price: $0</p>
+                <a href="Checkout.html" onclick="checkout()"><p id="checkout">Checkout</p></a>
+            </div>
+    </div>
+
+    <div class="item-container">
+        <h1>Featured Item</h1>
+        <div class="featured-item">
+            <h1>Pokémon GO Fest 2024: Global Ticket</h1>
+            <img class="main" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fweb-go-fest-2024-ticket.png&w=384&q=75" alt="Featured Item">
+            <img class="mini" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_global_event_ticket.png&w=48&q=75" alt="Featured Item">
+            <img class="mini" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Favatar_f_shirt_gofest2024gray.png&w=48&q=75" alt="Featured Item">
+            <img class="mini" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Favatar_m_shirt_gofest2024gray.png&w=48&q=75" alt="Featured Item">
+            <p class="bonus">LIMITED-TIME ONLY</p>
+            <p class="price">₱439.10</p>
+            <button class="addtocart" onclick="addToCart('Pokémon GO Fest 2024: Global Ticket', 439.10)">Add to Cart</button>
+
+        </div>
+
+        <h1>Item Boxes</h1>
+        <div class="featured-item">
+            <h1>Wonder Ticket</h1>
+            <img class="main" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fweb-zarude-ticket-box.png&w=384&q=75" alt="Featured Item">
+            <img class="mini" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_paid_raid_ticket.png&w=48&q=75" alt="Featured Item">
+            <p class="bonus">Web Exclusive</p>
+            <p class="price">₱289.00</p>
+            <button class="addtocart" onclick="addToCart('Wonder Ticket', 289.00)">Add to Cart</button>
+
+        </div>
+
+        <h1>PokéCoins</h1>
+        <div class="grid">
+            <div class="item-box">
+                <h1>600 PokéCoins</h1>
+                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xsmall.png&w=384&q=75" alt="Item 1">
+                <p class="bonus">50 WEB STORE BONUS COINS</p>
+                <p class="price">₱149.00</p>
+                <button class="addtocart" onclick="addToCart('600 PokéCoins', 149.00)">Add to Cart</button>
+
+            </div>
+        
+            <div class="item-box">
+                <h1>1,300 PokéCoins</h1>
+                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-small_v2.png&w=384&q=75" alt="Item 2">
+                <p class="bonus">100 WEB STORE BONUS COINS</p>
+                <p class="price">₱289.00</p>
+                <button class="addtocart" onclick="addToCart('1,300 PokéCoins', 289.00)">Add to Cart</button>
+
+            </div>
+            
+            <div class="item-box">
+                <h1>2,700 PokéCoins</h1>
+                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-medium_v2.png&w=384&q=75" alt="Item 2">
+                <p class="bonus">200 WEB STORE BONUS COINS</p>
+                <p class="price">₱589.00</p>
+                <button class="addtocart" onclick="addToCart('2,700 PokéCoins', 589.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="item-box">
+                <h1>5,600 PokéCoins</h1>
+                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-large-v2.png&w=384&q=75" alt="Item 2">
+                <p class="bonus">400 WEB STORE BONUS COINS</p>
+                <p class="price">₱1,169.00</p>
+                <button class="addtocart" onclick="addToCart('5,600 PokéCoins', 1,169.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="item-box">
+                <h1>15,500 PokéCoins</h1>
+                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xlarge.png&w=384&q=75" alt="Item 2">
+                <p class="bonus">1000 WEB STORE BONUS COINS</p>
+                <p class="price">₱2,950.00</p>
+                <button class="addtocart" onclick="addToCart('15,500 PokéCoins', 2,950)">Add to Cart</button>
+
+            </div>
+        
+        </div>
+    </div>
+
+
+</body>
+
+<footer>
+    <div class="footer-grid">
+    <div class="footer-container">
+        <table>
+            <tr>
+                <td>Pokémon GO Live</td>
+                <td>Support</td>
+            </tr>
+
+            <tr>
+                <td>Leaderboard</td>
+                <td>Offer Redemption</td>
+            </tr>
+            
+            <tr>
+                <td>Events</td>
+                <td>Community Day Map</td>
+            </tr>
+            
+            <tr>
+                <td>News</td>
+            </tr>
+        </table>
+    </div>
+
+        <div class="footer-container-socials">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z"/></svg>
+        </div>
+
+        <div class="footer-container-logos">
+            <img id="pokemon-company" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsite_assets%2Ftpc-logo.png&w=128&q=75">
+            <img id="niantic" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsite_assets%2Fniantic-logo.png&w=64&q=75">
+            <img id="grouplogo" src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t1.15752-9/432779898_921298492975427_9157515490535218193_n.png?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=EbDIoNOrl6EAX-PFlF7&_nc_ht=scontent.fmnl30-3.fna&oh=03_AdQLXBXDcnotFTcLosyUnFgCpFpfYbvsz80XuajjMl4qcw&oe=662B9F8A">
+        </div><br><br>
+    </div>
+        <hr>
+        <p>Pokémon GO is playable in English, French, German, Italian, Russian, Japanese, Spanish, Traditional Chinese, Korean, Thai, Brazillian Portuguese, Turkish, and Indonesian.</p>
+        <p>&copy;2024 Niantic, Inc. &copy;2024 Pokémon. &copy;1995–2024 Nintendo / Creatures Inc. / GAME FREAK inc. Pokémon and Pokémon character names are trademarks of Nintendo. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC. During gameplay, please be aware of your surroundings and play safely.</p>
+        <p>For educational purposes only and no copyright infringement is intended.</p>
+</footer>
+</html>

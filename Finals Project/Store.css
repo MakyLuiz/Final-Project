@@ -1,0 +1,228 @@
+/*----------------------------------BODY----------------------------------*/
+.store-container{
+    display: flex;
+    margin: 2% auto;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    background-color: #ffffff;
+    width: 80%;
+}
+
+h1{
+    color: #198496;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    margin-left: 3%;
+}
+
+.grid{
+    margin: 2% auto 5% auto;
+    width: 90%;
+    display: grid; 
+    grid-template-columns: auto auto auto;
+}
+
+.Transaction{
+    color: #198496;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    margin: 6% 15% auto 15%;
+}
+
+.Transaction:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/*----------------------------------CART----------------------------------*/
+
+.cart{
+    background-image: linear-gradient(319.49deg, #07c4c4 1.87%, #96cf9c 109.19%);
+    margin: auto 10% auto auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid #00000000;
+    color: #ffffff;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.cart:hover{
+    background-image: linear-gradient(319.49deg, #158a84 1.87%, #158a84 109.19%);
+}
+
+.cart-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #07c4c4;
+    border-radius: 25px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 28%; /* Position the dropdown below the button */
+    right: 15%; /* Align the dropdown to the right */
+}
+
+.cart-dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.cart-dropdown-content a:hover {
+    background-color: #bebebe;
+    border-radius: 25px;
+}
+
+#cart-content{
+    color: #ffffff;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#total-price{
+    display: none;
+    color: #ffffff;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.remove-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#checkout{
+    display: none;
+    color: #ffffff;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2px;
+}
+
+#checkout:hover{
+    text-decoration: underline;
+}
+
+
+
+/*----------------------------------ITEMS----------------------------------*/
+
+.item-container{
+    display: flex;
+    margin: 2% auto;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    background-color: #ffffff;
+    width: 80%;
+    display: grid;
+}
+
+.featured-item .bonus{
+    border: 1px solid #E880B7;
+    background-color: #E880B7;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-weight: bolder;
+    padding: 5px;
+    width: 20%;
+    margin: 20px auto;
+}
+
+.bonus{
+    border: 1px solid #E880B7;
+    background-color: #E880B7;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    padding: 5px;
+    width: 85%;
+    margin: 20px auto;
+}
+
+.price{
+    color: #0f4f5a;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+}
+
+.title-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 2% auto;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    background-color: #ffffff;
+    width: 80%;
+    display: grid;
+}
+
+.title-container img{
+    width: 25px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.featured-item {
+    background-image: linear-gradient(319.49deg, #ffdff2 1.87%, #ffffff 109.19%);
+    width: 80%;
+    border-radius: 15px;
+    padding: 20px;
+    margin: auto auto 5% auto;
+    text-align: center;
+    box-shadow: 0 0 8px 0 #00000046;
+    cursor: pointer;
+}
+
+.featured-item .main {
+    width: 200px;
+    height: auto;
+}
+
+.featured-item .mini {
+    width: 50px;
+    height: auto;
+}
+
+.item-box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 0 8px 0 #00000046;
+    cursor: pointer;
+}
+
+.item-box img {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    background-color: #daebe9;
+}
+
+
+.item-box:hover, .featured-item:hover {
+    box-shadow: 0 0 10px 5px #00000046;
+    transition: 0.2s ease;
+}
+
+.addtocart{
+    background-image: linear-gradient(319.49deg, #07c4c4 1.87%, #96cf9c 109.19%);
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 15px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 1px solid #00000000;
+}
+
+.addtocart:hover{
+    background-image: linear-gradient(319.49deg, #158a84 1.87%, #158a84 109.19%);
+}

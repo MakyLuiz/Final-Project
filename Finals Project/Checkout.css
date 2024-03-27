@@ -1,0 +1,151 @@
+.checkout-container{
+    background-color: #ffffff;
+    border-radius: 25px;
+    margin: 2% 5%;
+}
+
+.checkout-container h1{
+    color: #198496;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    margin: 0 0 0 3%;
+    padding-top: 2%;
+}
+
+.checkout-container hr{
+    width: 50%;
+    background-color: #198496;
+    height: 3px;
+    margin-left: 2.5%;
+}
+
+.list{
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    color: #198496;
+    margin: 3%;
+}
+
+#checkout{
+    background-image: linear-gradient(319.49deg, #07c4c4 1.87%, #96cf9c 109.19%);
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 15px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 1px solid #00000000;
+    margin: 0 3% 3% 3%;
+}
+
+#checkout:hover{
+    background-image: linear-gradient(319.49deg, #158a84 1.87%, #158a84 109.19%);
+}
+
+#close{
+    position: absolute;
+    background-image: linear-gradient(319.49deg, #07c4c4 1.87%, #96cf9c 109.19%);
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+    left: 0;
+    margin: 10px;
+    padding: 2% 3.3%;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #00000000;
+}
+
+.PlaceOrder{
+    display: none;
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+    background-image: linear-gradient(319.49deg, #345874 1.87%, #57998c 109.19%);
+    border-radius: 25px;
+    z-index: 1000;
+    position: absolute;
+    border: 3px solid #ffffff;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.PlaceOrder h1{
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.PlaceOrder hr{
+    width: 80%;
+    margin: 10px auto;
+    background-color: #ffffff;
+    height: 2px;
+    border: none;
+}
+
+#GCash, #Maya{
+    width: 50px;
+    height: auto;
+}
+
+#Visa{
+    width: 46px;
+    height: auto;
+}
+
+#MasterCard{
+    width: 43px;
+    height: auto;
+}
+
+.Payment{
+    margin: 20px;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+select[name="method"]{
+    width: 30%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #00000000;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    border: 1px solid #96cf9c;
+}
+
+option{
+    color: #000000;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+input[type="text"], input[type="number"], select{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #00000000;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    border: 1px solid #96cf9c;
+}
+
+#phoneNumber{
+    margin: 10px auto;
+    width: 50%;
+    background-color: #00000000;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    border: 1px solid #96cf9c;
+    padding: 5px;
+}

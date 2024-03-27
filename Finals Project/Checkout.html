@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="Checkout.css">
+</head>
+<body>
+    <script type="text/javascript" src="Index.js"></script>
+    <div class="navbar">
+        <a href="C:\Users\Maky\Desktop\Projects\Finals Project\Index.html"><img src="https://seeklogo.com/images/P/pokemon-go-logo-6A54081537-seeklogo.com.png"></a>
+        <h1>Sensei Miggy</h1>
+        <a href="Login Page.html" class="btn">Logout</a>
+        <a href="Profile.html" class="btn">Profile</a>
+        <a href="Store.html" class="btn">Store</a>
+        <a href="Index.html" class="btn">Home</a>
+    </div>
+
+    <div class="checkout-container">
+        
+        <h1>Checkout</h1>
+        <hr>
+        <div class="list">
+            <div id="checkout-cart"></div><br>
+            <div id="total-price"></div>
+        </div>
+
+        <button id="checkout" onclick="showPayment()">Checkout</button>
+        <div class="PlaceOrder">
+            <div><button id="close" onclick="closePayment()">X</button></div>
+            <h1>Payment</h1>
+            <hr>
+            <p>Payment Methods:</p>
+            <img id="Visa" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Old_Visa_Logo.svg/1024px-Old_Visa_Logo.svg.png" alt="Visa">
+            <img id="MasterCard" src="https://cdn.vox-cdn.com/thumbor/FtAV-Waa1rTPheAkxv3o4i0MVf0=/0x0:1000x1000/1200x800/filters:focal(421x430:581x590)/cdn.vox-cdn.com/uploads/chorus_image/image/62800797/Mastercard_logo.0.jpg" alt="MasterCard">
+            <img id="GCash" src="https://logohistory.net/wp-content/uploads/2023/08/GCash-Logo.jpg" alt="GCash">
+            <img id="Maya" src="https://www.rappler.com/tachyon/2022/04/maya-1.jpg" alt="Maya">
+            
+            <div class="Payment">
+                <label for="method">Choose Payment Method:</label>
+                <select name="method" id="method" onchange="showPaymentForm()">
+                    <option value="" disabled selected>Please select a payment method</option>
+                    <option value="Visa">Visa</option>
+                    <option value="MasterCard">MasterCard</option>
+                    <option value="GCash">GCash</option>
+                    <option value="Maya">Maya</option>
+                </select>
+            </div>
+        
+            <div id="visaMasterCardForm" style="display: none;">
+                <form id="paymentForm" action="/process_payment" method="post">
+                    <label for="cardholderName">Cardholder Name</label>
+                    <input type="text" id="cardholderName" name="cardholderName" required>
+            
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required>
+            
+                    <label for="expirationMonth">Expiration Month</label>
+                    <select id="expirationMonth" name="expirationMonth" required>
+                        <option value="" disabled selected>Select Month</option>
+                        <option value="01">01 - January</option>
+                        <option value="02">02 - February</option>
+                        <option value="03">03 - March</option>
+                        <option value="04">04 - April</option>
+                        <option value="05">05 - May</option>
+                        <option value="06">06 - June</option>
+                        <option value="07">07 - July</option>
+                        <option value="08">08 - August</option>
+                        <option value="09">09 - September</option>
+                        <option value="10">10 - October</option>
+                        <option value="11">11 - November</option>
+                        <option value="12">12 - December</option>
+                    </select>
+            
+                    <label for="expirationYear">Expiration Year</label>
+                    <select id="expirationYear" name="expirationYear" required>
+                        <option value="" disabled selected>Select Year</option>
+                        <option value="24">2024</option>
+                        <option value="25">2025</option>
+                        <option value="26">2026</option>
+                        <option value="27">2027</option>
+                        <option value="28">2028</option>
+                        <option value="29">2029</option>
+                        <option value="30">2030</option>
+                        <option value="31">2031</option>
+                        <option value="32">2032</option>
+                        <option value="33">2033</option>
+                        <option value="34">2034</option>
+                        <option value="35">2035</option>
+                    </select>
+            
+                    <label for="cvv">CVV/CVC</label>
+                    <input type="text" id="cvv" name="cvv" maxlength="4" required>
+            
+                    <label for="billingAddress">Billing Address</label>
+                    <input type="text" id="billingAddress" name="billingAddress" required>
+            
+                    <label for="amount">Amount</label>
+                    <div id="visaMasterCardTotalPrice"></div><br>
+
+                    <button type="submit" value="submit payment">Place Order</button>
+            </div>
+        
+            <div id="gcashMayaForm" style="display: none;">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber">
+                <button type="submit" value="submit payment">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <div class="footer-grid">
+    <div class="footer-container">
+        <table>
+            <tr>
+                <td>Pokémon GO Live</td>
+                <td>Support</td>
+            </tr>
+
+            <tr>
+                <td>Leaderboard</td>
+                <td>Offer Redemption</td>
+            </tr>
+            
+            <tr>
+                <td>Events</td>
+                <td>Community Day Map</td>
+            </tr>
+            
+            <tr>
+                <td>News</td>
+            </tr>
+        </table>
+    </div>
+
+        <div class="footer-container-socials">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z"/></svg>
+        </div>
+
+        <div class="footer-container-logos">
+            <img id="pokemon-company" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsite_assets%2Ftpc-logo.png&w=128&q=75">
+            <img id="niantic" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsite_assets%2Fniantic-logo.png&w=64&q=75">
+            <img id="grouplogo" src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t1.15752-9/432779898_921298492975427_9157515490535218193_n.png?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=EbDIoNOrl6EAX-PFlF7&_nc_ht=scontent.fmnl30-3.fna&oh=03_AdQLXBXDcnotFTcLosyUnFgCpFpfYbvsz80XuajjMl4qcw&oe=662B9F8A">
+        </div><br><br>
+    </div>
+        <hr>
+        <p>Pokémon GO is playable in English, French, German, Italian, Russian, Japanese, Spanish, Traditional Chinese, Korean, Thai, Brazillian Portuguese, Turkish, and Indonesian.</p>
+        <p>&copy;2024 Niantic, Inc. &copy;2024 Pokémon. &copy;1995–2024 Nintendo / Creatures Inc. / GAME FREAK inc. Pokémon and Pokémon character names are trademarks of Nintendo. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC. During gameplay, please be aware of your surroundings and play safely.</p>
+        <p>For educational purposes only and no copyright infringement is intended.</p>
+</footer>
+</html>

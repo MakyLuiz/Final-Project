@@ -1,0 +1,26 @@
+.profile-grid{
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin: 20px;
+}
+
+.profile-grid > div{
+    text-align: center;
+    font-size: 30px;
+    border-radius: 25px;
+    margin: 5px;
+}
+
+.left{
+    background-image: linear-gradient(319.49deg, #345874 1.87%, #57998c 109.19%);
+    padding: 20px;
+}
+
+.left #profile{
+    border-radius: 50%;
+}
+
+.right{
+    background-image: linear-gradient(319.49deg, #345874 1.87%, #57998c 109.19%);
+    padding: 2px;
+}
