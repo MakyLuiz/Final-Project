@@ -1,3 +1,4 @@
+// --------------------------- LOGIN ---------------------------
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('loginButton').addEventListener('click', function () {
         var username = document.getElementById('username').value;
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
+// --------------------------- CART FUNCTIONALITY ---------------------------
 function toggleDropdown() {
     var dropdown = document.getElementById("cart");
     if (dropdown.style.display === "none") {
@@ -53,7 +54,7 @@ function addToCart(item, price) {
 }
 
 function removeFromCart(button, price) {
-    button.parentElement.remove(); // Remove the item from the DOM
+    button.parentElement.remove(); // Remove the item
     totalPrice -= price; // Subtract the price of the removed item from the total price
   
     // Update total price display
@@ -62,6 +63,7 @@ function removeFromCart(button, price) {
 }
 
 
+//--------------------------- CHECKOUT ---------------------------
 function checkout() {
     // Redirect to the checkout page
     window.location.href = 'checkout.html';
@@ -69,8 +71,8 @@ function checkout() {
 
 document.addEventListener('DOMContentLoaded', function() {
     var checkoutCart = document.getElementById('checkout-cart');
-    var totalPriceElement = document.getElementById('total-price'); // Total price outside payment form
-    var visaMasterCardTotalPrice = document.getElementById('visaMasterCardTotalPrice'); // Total price inside payment form
+    var totalPriceElement = document.getElementById('total-price');
+    var visaMasterCardTotalPrice = document.getElementById('visaMasterCardTotalPrice');
 
     // Retrieve cart items from localStorage
     var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -81,11 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
         checkoutCart.innerHTML += `<div>${item.item} - ₱${item.price.toFixed(2)}</div>`;
     });
 
-    // Display total price outside payment form
+    // Display total price
     var totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
     totalPriceElement.textContent = 'Total Price: ₱' + totalPrice.toFixed(2);
 
-    // Display total price inside payment form
+    // Display total price
     visaMasterCardTotalPrice.textContent = 'Total Price: ₱' + totalPrice.toFixed(2);
 
     // Function to clear cart items from localStorage
@@ -101,14 +103,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function showPayment() {
-    var payment = document.querySelector(".PlaceOrder"); // Select the .PlaceOrder element
-    payment.style.display = (payment.style.display === "none") ? "block" : "none"; // Toggle its display
+    var payment = document.querySelector(".PlaceOrder");
+    payment.style.display = (payment.style.display === "none") ? "block" : "none"; // Toggle ON display
 }
 
 function closePayment() {
-    var payment = document.querySelector(".PlaceOrder"); // Select the .PlaceOrder element
-    payment.style.display = (payment.style.display === "block") ? "none" : "block"; // Toggle its display
+    var payment = document.querySelector(".PlaceOrder");
+    payment.style.display = (payment.style.display === "block") ? "none" : "block"; // Toggle OFF display
 }
+
+// --------------------------- PAYMENT METHOD FORMS ---------------------------
 
 function showPaymentForm() {
     var method = document.getElementById("method").value;
@@ -128,7 +132,7 @@ function showPaymentForm() {
 }
 
 
-
+// --------------------------- REGISTER FORM ---------------------------
 
 function register(event) {
     event.preventDefault(); // Prevent form submission
