@@ -47,8 +47,10 @@ h1{
     position: absolute;
     bottom: 10px;
     left: 25px;
-    color: #ffffff;
+    color: #000000;
     font-family:'Trebuchet MS', Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 5px;
 }
 
 
