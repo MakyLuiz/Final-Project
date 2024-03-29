@@ -10,6 +10,7 @@ body {
     overflow: hidden;
 }
 
+/*----------------------------------  VIDEO BACKGROUND  ----------------------------------*/
 video{
     position: absolute;
     width: 1395px;
@@ -54,6 +55,7 @@ h1{
     padding: 5px;
 }
 
+/*----------------------------------  LOGIN FORM  ----------------------------------*/
 
 .container-login {
     justify-content: center;
