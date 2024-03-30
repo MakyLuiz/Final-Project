@@ -1,26 +1,116 @@
 .profile-grid{
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: auto 72%;
     margin: 20px;
 }
 
 .profile-grid > div{
-    text-align: center;
+    text-align: left;
     font-size: 30px;
-    border-radius: 25px;
-    margin: 5px;
+    margin: 10px;
+    padding-left: 50px;
 }
+
+/*--------------------------------- LEFT CONTAINER ---------------------------------*/
 
 .left{
     background-image: linear-gradient(319.49deg, #345874 1.87%, #57998c 109.19%);
-    padding: 20px;
+    padding: 0 50px 0 50px;
+    box-shadow: 0px 0px 4px 0px;
+    height: 62%;
+    border-radius: 50px;
 }
 
-.left #profile{
-    border-radius: 50%;
+.left p{
+    text-align: center;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    border: 3px solid #00000000;
+    margin: 10% auto;
+    width: 80%;
+    border-radius: 25px;
+    background-image: linear-gradient(319.49deg, #07c4c4 1.87%, #96cf9c 109.19%);
 }
+
+.left label{
+    font-size: 25px;
+}
+
+#profile{
+    border-radius: 50%;
+    height: auto;
+    width: 15rem;
+    position: relative;
+    border: 5px solid #ffffff;
+    box-shadow: 0px 0px 8px 1px;
+}
+
+.overlay {
+    background-image: linear-gradient(319.49deg, #345874 1.87%, #57998c 109.19%);
+    position: absolute; 
+    margin: 0 0 0 10%; 
+    transform: translate(0, -50%); 
+    width: auto;
+    height: 120px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px 1px;
+}
+
+
+.team{
+    background-image: linear-gradient(to bottom, #345874 50%, #57998c);
+    border: 3px solid #ffffff;
+    border-radius: 25px;
+    padding: 10% 10% 3% 10%;
+    width: 80%;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    color: #ffffff;
+    margin-top: 20%;
+    text-align: center;
+}
+
+#instinct{
+    margin-top: 20px;
+    width: 70%;
+    height: auto;
+}
+
+/*--------------------------------- RIGHT CONTAINER ---------------------------------*/
 
 .right{
     background-image: linear-gradient(319.49deg, #345874 1.87%, #57998c 109.19%);
-    padding: 2px;
+    box-shadow: 0px 0px 4px 0px;
+    border-radius: 50px;
+    padding-bottom: 25px;
+}
+
+.right h1, h2{
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+label{
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.profile-detail {
+    background-image: linear-gradient(to right, #446178 , #ffffff27);
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    position: relative;
+    border: 3px solid;
+    border-radius: 25px;
+    box-shadow: 0px 0px 4px 0px #000000;
+    padding: 10px 0px 10px 25px;
+    width: 90%;
+    margin: 10px 0px;
 }
